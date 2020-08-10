@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
+{% load static%}
 {% block content %}
-<h1 style="text-align: center">My Orders</h1>
+<div style="background-color: orange">
+	<h1 style="text-align: center">My Orders</h1>
 {% for order in orders %}
 <div style="margin: 40px" class="alert alert-warning" role = "alert">
 	<p>{{order.username}}</p>
@@ -10,4 +12,5 @@
 	<p>Order Status : {{order.status}}</p>
 </div>
 {% endfor %}
+</div>
 {% endblock %}
